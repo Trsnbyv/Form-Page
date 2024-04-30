@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <link rel="stylesheet" href="./CSS/main.css">
+  </head>
+  <body>
+    <form action="https://echo.htmlacademy.ru">
+      <div class="signin-wrapper">
+        <div class="signin-title-wrapper">
+          <h1 class="signin-title">Admin Students</h1>
+        </div>
+        <h2 class="signin-middle">Sign In</h2>
+        <p class="signin-text">Enter your credentials to access your account</p>
+        <label class="label" for="login">Login</label>
+        <input
+          name="login"
+          required
+          autocomplete="off"
+          type="text"
+          id="login"
+          placeholder="Enter your login">
+        <label class="label" for="password">Password</label>
+        <input
+          minlength="8"
+          maxlength="16"
+          name="password"
+          required
+          autocomplete="off"
+          type="password"
+          id="password"
+          placeholder="Enter your password">
+        <button class="signin-button" type="submit">SIGN IN</button>
+        <a class="signup-link" href="./signup.html"> Sign Up </a>
+      </div>
+    </form>
+  </body>
+</html>
