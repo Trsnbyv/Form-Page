@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const userForm = document.getElementById('userForm');
     const userList = document.getElementById('userList');
 
-    // Open modal
     addUserBtn.addEventListener('click', () => {
         modal.style.display = 'block';
         setTimeout(() => {
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 10);
     });
 
-    // Close modal
     closeBtn.addEventListener('click', () => {
         closeModal();
     });
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     }
 
-    // Handle form submission
     userForm.addEventListener('submit', (event) => {
         event.preventDefault();
 
@@ -53,17 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
             photo: URL.createObjectURL(photo)
         };
 
-        // Add user card to the list
         addUserCard(user);
 
-        // Close modal
         closeModal();
 
-        // Reset form
         userForm.reset();
     });
 
-    // Add user card to the list
     function addUserCard(user) {
         const li = document.createElement('li');
         li.classList.add('user-card');
