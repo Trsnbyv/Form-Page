@@ -90,29 +90,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const actionsDiv = document.createElement('div');
         actionsDiv.classList.add('actions');
-        actionsDiv.className = "flex"
+        actionsDiv.style.display = "flex"
+        actionsDiv.style.alignItems = "center"
+        actionsDiv.style.gap = "10px"
+        console.log(actionsDiv);
         
         const moreBtn = document.createElement('button');
         const moreImg = document.createElement('img')
         moreImg.src = '../images/more-img.svg'
+        moreImg.style.width = '19px';
+        moreImg.style.height = '4px';
+        moreImg.style.borderRadius = '0'        
         moreBtn.appendChild(moreImg)
         actionsDiv.appendChild(moreBtn);
 
         const editBtn = document.createElement('button');
         const editImg = document.createElement('img')
         editImg.src = '../images/edit-img.svg'
-        moreBtn.appendChild(editImg)
+        editImg.style.width = '19px';
+        editImg.style.height = '19px';
+        editImg.style.borderRadius = '0'
+        editBtn.appendChild(editImg)
         actionsDiv.appendChild(editBtn);
 
         const deleteBtn = document.createElement('button');
         const deleteImg = document.createElement('img')
         deleteImg.src = '../images/delete-img.svg'
-        moreBtn.appendChild(deleteImg)
+        deleteImg.style.width = '16px ';
+        deleteImg.style.height = '18px';
+        deleteImg.style.borderRadius = '0'
+        deleteBtn.appendChild(deleteImg)
         deleteBtn.addEventListener('click', () => {
             userList.removeChild(li);
         });
         actionsDiv.appendChild(deleteBtn);
-
         userInfo.appendChild(actionsDiv);
 
         li.appendChild(userInfo);
