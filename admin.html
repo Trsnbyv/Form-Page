@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./CSS/admin.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex justify-between">
+        <div class="admin-left w-[20%] bg-[#F2EAE1] pt-[18px] text-center h-[100vh]">
+            <a href="./index.html" class="mb-[54px] ml-[24px] block"><img src="./images/logo.svg" width="183" height="24" alt="logo"></a>
+            <label class="mb-[20px]">
+                <input type="file" name="user-img" class="visually-hidden">
+                <img  src="./images/upload-photo.svg" alt="upload" width="100" height="100" class="user-img m-auto block">
+            </label>
+            <span class="admin-name text-[17px] font-bold mb-[10px]">Karthi Madesh</span>
+            <p class="admin-text text-[#FEAF00] text-[14px] mb-[63px]">Admin</p>
+            <button class="admin-btn flex items-center justify-center gap-[15px] w-[193px] py-[13px] bg-[#FEAF00] border-none m-auto rounded-[4px]"><img src="./images/students-btn.svg" alt="logo"><span class="text-black font-medium text-[14px] leading-[17px]">Students</span></button>
+        </div>
+        <div class="w-[80%] h-min flex flex-col">
+            <div class="flex justify-between items-center bg-[#F2EAE1] py-[12px] pl-[30px] pr-[56px]">
+                <button><img src="./images/arrow-btn.svg" width="17" height="17" alt="arrow"></button>
+    
+                <div class="flex gap-[27px]">
+                    <label class="flex w-[214px] relative py-[10px] px-[13px] bg-white rounded-[8px]">
+                        <input type="text" placeholder="Search..." class="outline-none border-none">
+                        <img src="./images/search-img.svg" width="14" height="14" alt="search-img" class="obsolute top-[11px] right-[16px]">
+                    </label>
+                    <button><img src="./images/notification-img.svg" width="17" height="20" alt=""></button>
+                </div>
+            </div> 
+            <div class="pt-[12px] pl-[30px] pr-[30px] flex justify-between items-center mb-[12px]">
+                <h2 class="text-[22px] leading-[26px] font-bold">Students List</h2>
+                <div class="flex gap-[30px] items-center">
+                    <img src="./images/sort-arrow.svg" alt="sort" width="14" height="22">
+                    <button id="addUserBtn" class="w-[199px] py-[14px] bg-[#FEAF00] rounded-[4px] text-white text-[14px] font-medium">ADD NEW STUDENT</button>
+                </div>
+            </div>
+            <div class="h-[1.5px] w-[95%] bg-[#E5E5E5] m-auto"></div>
+            
+    
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>Add New User</h2>
+                    <form id="userForm">
+                        <input type="file" id="photo" name="photo" required>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <input type="number" id="phone" name="phone" placeholder="Phone" required>
+                        <input type="number" id="enroll" name="enroll" placeholder="Enroll Number" required>
+                        <input type="date" id="admission" name="admission" placeholder="Date of Admission" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        
+            <ul id="userList" class="px-[30px] user-list">
+                <li class="user-card w-[893px] m-auto">
+                    <div class="user-info">
+                        <span>Name</span>
+                        <span>Email</span>
+                        <span>Phone</span>
+                        <span>Enroll Number</span>
+                        <span>Date of Admission</span>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="./js/admin.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>
